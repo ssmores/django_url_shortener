@@ -1,9 +1,12 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 
 from .models import KirrURL
 # Create your views here.
+
+def test_view(request):
+    return HttpResponse('some stuff')
 
 # Function based view
 def kirr_redirect_view(request, shortcode=None, *args, **kwargs):
@@ -22,14 +25,14 @@ def kirr_redirect_view(request, shortcode=None, *args, **kwargs):
     #     obj = qs.first()
     #     obj_url = obj.url
     
-    return HttpResponse('hello {sc}'.format(sc=obj.url))
+    return HttpResponseRedirect(obj.url)
 
 
 # Class based view
 class KirrCBView(View):
     def get(self, request, shortcode=None, *args, **kwargs):
         obj = get_object_or_404(KirrURL, shortcode=shortcode)  
-        return HttpResponse()
+        return HttpResponseRedirect(obj.url)
 
     def post(self, request, *args, **kwargs):
         return HttpResponse()
