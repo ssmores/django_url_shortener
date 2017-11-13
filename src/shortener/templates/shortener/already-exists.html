@@ -1,7 +1,23 @@
-<div style="align-text: center; width: 800px; margin: 0 auto;">
-    <h1>Exists</h1>
-    <p>{{ object.url}}</p>
+{% extends "base.html" %}
 
-    <p>{{ object.get_short_url }}</p>
-    <a href="/">+ New</a>
+{% block title %}
+
+{{ object.shortcode}} | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<div>
+    <h1>Exists Already</h1>
+    <!-- <div class="well"> -->
+        <p>{{ object.url}}</p>
+        {% if object.clickevent %}
+            <p>Count: {{ object.clickevent.count }}</p>
+        {% endif %}
+        <p>
+            <a class="btn btn-primary btn-link" href='{{ object.get_short_url }}'>{{ object.get_short_url }}</a>
+        </p>
+    <!-- </div> -->
+    <a class="btn btn-default" href="/">+ New</a>
 </div>
+
+{% endblock content %}
