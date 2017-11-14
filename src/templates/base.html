@@ -4,6 +4,20 @@
         <title>Kirr.co | {% block title %} Shorten that URL {% endblock title %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://getbootstrap.com/docs/3.3/examples/cover/cover.css" rel="stylesheet">
+        {% block styles %}
+        <style>
+            body {
+                background-color: #ad98ff;
+            }
+            .btn-link {
+                color: #97fff2;
+                text-shadow: none;
+            }
+            .btn-link:hover {
+                color: #000;
+            }
+        </style>
+        {% endblock styles %}
     </head>
     <body>
         <div class="site-wrapper">

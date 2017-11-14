@@ -10,10 +10,12 @@ from .models import KirrURL
 
 class HomeView(View):
     def get(self, request, *args, **kwargs):
-        form = SubmitUrlForm()
+        the_form = SubmitUrlForm()
+        bg_image = 'http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1436888153/FLORIDA0715-boneyard-beach.jpg?itok=J4JYeqy7'
         context = {
             "title": "Kirr.co",
-            "form": form,
+            "form": the_form,
+            "bg_image": bg_image,
         }
         return render(request, "shortener/home.html", context)
 

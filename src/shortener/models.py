@@ -46,6 +46,8 @@ class KirrURL(models.Model):
         """Overwriting existing save method to take args and kwargs."""
         if not self.shortcode:
             self.shortcode = create_shortcode(self)
+        if not 'http' in self.url:
+            self.url = 'http://' + self.url
         super(KirrURL, self).save(*args, **kwargs)
 
 
