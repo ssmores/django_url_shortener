@@ -25,7 +25,7 @@ SECRET_KEY = '9!5b%6k2kcs*3*=y6@_b)2*$2%5!y&bior^zbhqxp2e(47o_#g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co']
+ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co', 'safe-anchorage-91546']
 
 
 # Application definition
