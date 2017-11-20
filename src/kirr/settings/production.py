@@ -25,7 +25,7 @@ SECRET_KEY = '9!5b%6k2kcs*3*=y6@_b)2*$2%5!y&bior^zbhqxp2e(47o_#g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.kirr.co', 'kirr.co', 'safe-anchorage-91546']
+ALLOWED_HOSTS = ['safe-anchorage-91546.herokuapp.com']
 
 
 # Application definition
@@ -61,8 +61,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'kirr.urls'
 ROOT_HOSTCONF = 'kirr.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = "http://www.kirr.co"
-PARENT_HOST = 'kirr.co'
+DEFAULT_REDIRECT_URL = 'https://safe-anchorage-91546.herokuapp.com'
+PARENT_HOST = 'safe-anchorage-91546.herokuapp.com'
 
 TEMPLATES = [
     {
