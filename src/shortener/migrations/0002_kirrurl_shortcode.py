@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='kirrurl',
             name='shortcode',
-            field=models.CharField(default='defaultedvaluehere', max_length=15),
+            field=models.CharField(default=15, max_length=15),
             preserve_default=False,
         ),
     ]
